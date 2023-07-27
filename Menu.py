@@ -1,12 +1,15 @@
 import pygame
 import sys
+import Login 
 
 # Inicializa o Pygame
 pygame.init()
 
 # Definir cores
 BRANCO = (255, 255, 255)
+PRETO = (0, 0, 0)
 AZUL = (0, 0, 255)
+
 
 # Definir fonte
 fonte = pygame.font.Font(None, 40)
@@ -37,6 +40,8 @@ while rodando:
             # Verifica se o clique do mouse ocorreu dentro do botão "Login"
             if pos_x_login - largura_botao//2 <= evento.pos[0] <= pos_x_login + largura_botao//2 and \
                pos_y_login - altura_botao//2 <= evento.pos[1] <= pos_y_login + altura_botao//2:
+                #caixas_texto()
+                Login.caixas_texto()
                 print("Login")
             # Verifica se o clique do mouse ocorreu dentro do botão "Cadastrar"
             elif pos_x_login - largura_botao//2 <= evento.pos[0] <= pos_x_login + largura_botao//2 and \
@@ -78,7 +83,7 @@ while rodando:
     pygame.draw.rect(janela, AZUL, (pos_x_sobre, pos_y_sobre, largura_botao_sobre, altura_botao_sobre))
     desenhar_texto("Sobre", BRANCO, pos_x_sobre + largura_botao_sobre//2, pos_y_sobre + altura_botao_sobre//2)
 
-    # Atualiza a tela
+    # Atualiza a janela
     pygame.display.flip()
 
 # Encerra o Pygame
