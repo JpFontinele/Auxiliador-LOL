@@ -46,6 +46,7 @@ while rodando:
             # Verifica se o clique do mouse ocorreu dentro do botão "Cadastrar"
             elif pos_x_login - largura_botao//2 <= evento.pos[0] <= pos_x_login + largura_botao//2 and \
                  pos_y_cadastrar - altura_botao//2 <= evento.pos[1] <= pos_y_cadastrar + altura_botao//2:
+                Login.caixas_texto(False)
                 print("Cadastro")
             # Verifica se o clique do mouse ocorreu dentro do botão "Help"
             elif pos_x_login - largura_botao//2 <= evento.pos[0] <= pos_x_login + largura_botao//2 and \
